@@ -11,6 +11,7 @@ import net.minecraft.world.entity.animal.Animal;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.Level;
+import net.rinkablu.lochwood.entity.ModEntities;
 import net.rinkablu.lochwood.item.ModItems;
 import org.jetbrains.annotations.Nullable;
 
@@ -52,7 +53,7 @@ public class UnicornEntity extends Animal {
     @Nullable
     @Override
     public AgeableMob getBreedOffspring(ServerLevel serverLevel, AgeableMob ageableMob) {
-        return null;
+        return ModEntities.UNICORN.get().create(level());
     }
 
 private void setupAnimationsStates() {

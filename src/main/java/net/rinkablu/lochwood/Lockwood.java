@@ -1,6 +1,7 @@
 package net.rinkablu.lochwood;
 
 import net.minecraft.world.item.CreativeModeTabs;
+import net.rinkablu.lochwood.entity.ModEntities;
 import net.rinkablu.lochwood.item.ModItems;
 import org.slf4j.Logger;
 
@@ -40,6 +41,7 @@ public class Lockwood
 
 
         ModItems.register(modEventBus);
+        ModEntities.register(modEventBus);
 
         // Register the item to a creative tab
         modEventBus.addListener(this::addCreative);
