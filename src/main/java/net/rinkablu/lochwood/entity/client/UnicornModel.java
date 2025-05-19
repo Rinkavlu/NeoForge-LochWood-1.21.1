@@ -99,8 +99,8 @@ import net.rinkablu.lochwood.entity.custom.UnicornEntity;
            this.root().getAllParts().forEach(ModelPart::resetPose);
            this.applyHeadRotation(netHeadYaw,headPitch);
 
-           this.animateWalk(UnicornAnimations.UNICORN_WALK,limbSwing,limbSwingAmount,2f,2.5f);
-           this.animate(entity.idleAnimationState,UnicornAnimations.UNICORN_IDLE,ageInTicks,1f);
+           this.animateWalk(UnicornAnimations.WALK,limbSwing,limbSwingAmount,2f,2.5f);
+           this.animate(entity.idleAnimationState,UnicornAnimations.IDLE,ageInTicks,1f);
         }
 
 
