@@ -1,7 +1,11 @@
 package net.rinkablu.lochwood;
 
+import net.minecraft.client.renderer.entity.EntityRenderers;
 import net.minecraft.world.item.CreativeModeTabs;
+import net.neoforged.bus.api.Event;
 import net.rinkablu.lochwood.entity.ModEntities;
+import net.rinkablu.lochwood.entity.client.UnicornRenderer;
+import net.rinkablu.lochwood.event.ModEventBusEvents;
 import net.rinkablu.lochwood.item.ModItems;
 import org.slf4j.Logger;
 
@@ -43,6 +47,8 @@ public class Lockwood
         ModItems.register(modEventBus);
         ModEntities.register(modEventBus);
 
+
+
         // Register the item to a creative tab
         modEventBus.addListener(this::addCreative);
 
@@ -75,6 +81,7 @@ public class Lockwood
         @SubscribeEvent
         public static void onClientSetup(FMLClientSetupEvent event)
         {
+            EntityRenderers.register(ModEntities.UNICORN.get(), UnicornRenderer::new);
 
         }
     }

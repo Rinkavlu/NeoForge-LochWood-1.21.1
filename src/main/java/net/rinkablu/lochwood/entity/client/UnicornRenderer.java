@@ -18,7 +18,7 @@ public class UnicornRenderer extends MobRenderer<UnicornEntity, UnicornModel<Uni
 
     @Override
     public ResourceLocation getTextureLocation(UnicornEntity entity) {
-        return ResourceLocation.fromNamespaceAndPath(Lockwood.MOD_ID, "textures/entity/gecko/gecko_blue.png");
+        return ResourceLocation.fromNamespaceAndPath(Lockwood.MOD_ID, "textures/entity/unicorn/unicorn_red.png");
     }
 
     @Override
